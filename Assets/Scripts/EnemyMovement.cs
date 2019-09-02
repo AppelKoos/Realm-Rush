@@ -10,14 +10,13 @@ public class EnemyMovement : MonoBehaviour
         var path = pathfinder.GetPath();
         StartCoroutine(FollowPath(path));
     }
-
     IEnumerator FollowPath(List<Waypoint> path)
     {
         print("Start Patrol");
         foreach (Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.position;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.2f);
         }
         print("End Patrol");
     }

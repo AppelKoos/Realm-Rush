@@ -6,7 +6,7 @@ public class Waypoint : MonoBehaviour
 {
     [SerializeField] Color exploredColor = Color.blue;
     public Waypoint exploredFrom;
-    public bool isExpored = false;
+    public bool isExplored = false;
     Vector2Int gridPos;
     const int GRIDSIZE = 10;
     private void Update()
@@ -32,7 +32,7 @@ public class Waypoint : MonoBehaviour
     private void UpdateColorOnExplore()
     {
         MeshRenderer topMeshRenderer = transform.Find("CubeFace1").GetComponent<MeshRenderer>();
-        if (isExpored)
+        if (isExplored)
         {
             topMeshRenderer.material.color = exploredColor;
         }
