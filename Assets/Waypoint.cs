@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
+    public bool isExpored = false;
     Vector2Int gridPos;
     const int GRIDSIZE = 10;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
     public int GetGridSize()
     {
         return GRIDSIZE;
@@ -18,8 +14,8 @@ public class Waypoint : MonoBehaviour
     public Vector2Int GetGridPos()
     {
         return new Vector2Int(
-            Mathf.RoundToInt(transform.position.x / GRIDSIZE) * GRIDSIZE,
-            Mathf.RoundToInt(transform.position.z / GRIDSIZE) * GRIDSIZE
+            Mathf.RoundToInt(transform.position.x / GRIDSIZE),
+            Mathf.RoundToInt(transform.position.z / GRIDSIZE)
         );
     }
     public void SetTopColor(Color color)
