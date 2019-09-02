@@ -11,7 +11,7 @@ public class Waypoint : MonoBehaviour
     const int GRIDSIZE = 10;
     private void Update()
     {
-        UpdateColorOnExplore();
+        //UpdateColorOnExplore();
     }
     public int GetGridSize()
     {
