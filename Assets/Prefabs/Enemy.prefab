@@ -75,8 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587b94c47e0813d4598e9cb62082bee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyChild: {fileID: 1523185951217079776, guid: 497ac8de29760cd48888d78769f2bee1,
-    type: 3}
+  enemyChild: {fileID: 755724842}
 --- !u!114 &755724842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da30bfe565fdf04db862e3b9bab89e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
+  hitPoints: 4
+  enemyCollider: {fileID: 2107450830}
 --- !u!1001 &426090663840334217
 PrefabInstance:
   m_ObjectHideFlags: 0

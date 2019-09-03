@@ -6,15 +6,10 @@ public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] int hitPoints = 10;
     [SerializeField] BoxCollider enemyCollider;
-    bool isDead = false;
-   
-    public bool GetIsDead()
-    { return isDead; }
     private void OnParticleCollision(GameObject other)
     {
         ProcessHit();
         KillEnemy();
-        print("Health " + hitPoints);
     }
     private void ProcessHit()
     { hitPoints = hitPoints - 1; }
@@ -22,7 +17,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (hitPoints < 0)
         {
-            isDead = true;
+            print("EnemyKilled");
             Destroy(gameObject);
         }
     }

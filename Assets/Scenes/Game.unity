@@ -1180,7 +1180,7 @@ PrefabInstance:
     - target: {fileID: 2903062212702718762, guid: 7cde57e09f0302649a98404c06a30355,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2903062212702718762, guid: 7cde57e09f0302649a98404c06a30355,
         type: 3}
@@ -1190,7 +1190,7 @@ PrefabInstance:
     - target: {fileID: 2903062212702718762, guid: 7cde57e09f0302649a98404c06a30355,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2903062212702718762, guid: 7cde57e09f0302649a98404c06a30355,
         type: 3}
@@ -1970,14 +1970,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 951957620, guid: 497ac8de29760cd48888d78769f2bee1, type: 3}
-      propertyPath: enemyChild
-      value: 
-      objectReference: {fileID: 755724842}
     - target: {fileID: 755724842, guid: 497ac8de29760cd48888d78769f2bee1, type: 3}
-      propertyPath: enemyCollider
-      value: 
-      objectReference: {fileID: 1409825834}
+      propertyPath: hitPoints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 497ac8de29760cd48888d78769f2bee1, type: 3}
 --- !u!1 &755724840 stripped
@@ -1986,18 +1982,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 755724839}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &755724842 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 755724842, guid: 497ac8de29760cd48888d78769f2bee1,
-    type: 3}
-  m_PrefabInstance: {fileID: 755724839}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755724840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9da30bfe565fdf04db862e3b9bab89e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &836515551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6937028485767245487, guid: fa6d275a36700694bbdc5c1cd76855e4,
@@ -2947,12 +2931,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6937028485767245487, guid: fa6d275a36700694bbdc5c1cd76855e4,
     type: 3}
   m_PrefabInstance: {fileID: 317427475}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1409825834 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 2107450830, guid: 497ac8de29760cd48888d78769f2bee1,
-    type: 3}
-  m_PrefabInstance: {fileID: 755724839}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1419223442
 GameObject:
@@ -4475,7 +4453,7 @@ PrefabInstance:
     - target: {fileID: 2903062212702718762, guid: 7cde57e09f0302649a98404c06a30355,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2903062212702718762, guid: 7cde57e09f0302649a98404c06a30355,
         type: 3}
@@ -4485,7 +4463,7 @@ PrefabInstance:
     - target: {fileID: 2903062212702718762, guid: 7cde57e09f0302649a98404c06a30355,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2903062212702718762, guid: 7cde57e09f0302649a98404c06a30355,
         type: 3}
@@ -4527,10 +4505,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2903062212702718763, guid: 7cde57e09f0302649a98404c06a30355,
-        type: 3}
-      propertyPath: targetEnemy
-      value: 
-      objectReference: {fileID: 1729453229}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cde57e09f0302649a98404c06a30355, type: 3}
