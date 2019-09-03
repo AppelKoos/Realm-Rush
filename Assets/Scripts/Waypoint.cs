@@ -9,7 +9,6 @@ public class Waypoint : MonoBehaviour
     public bool isExplored = false;
     Vector2Int gridPos;
     const int GRIDSIZE = 10;
-
     public int GetGridSize()
     {
         return GRIDSIZE;
@@ -20,11 +19,6 @@ public class Waypoint : MonoBehaviour
             Mathf.RoundToInt(transform.position.x / GRIDSIZE),
             Mathf.RoundToInt(transform.position.z / GRIDSIZE)
         );
-    }
-    public void SetTopColor(Color color)
-    {
-        MeshRenderer topMeshRenderer = transform.Find("CubeFace1").GetComponent<MeshRenderer>();
-        topMeshRenderer.material.color = color;
     }
     private void UpdateColorOnExplore()
     {
@@ -37,5 +31,9 @@ public class Waypoint : MonoBehaviour
         {
             topMeshRenderer.material.color = Color.white;
         }
+    }
+    private void OnMouseOver()
+    {
+        print("Mouse over " + gameObject.name);
     }
 }
