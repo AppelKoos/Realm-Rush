@@ -9,10 +9,7 @@ public class Waypoint : MonoBehaviour
     public bool isExplored = false;
     Vector2Int gridPos;
     const int GRIDSIZE = 10;
-    private void Update()
-    {
-        //UpdateColorOnExplore();
-    }
+
     public int GetGridSize()
     {
         return GRIDSIZE;
@@ -41,5 +38,4 @@ public class Waypoint : MonoBehaviour
             topMeshRenderer.material.color = Color.white;
         }
     }
-
 }

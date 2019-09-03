@@ -28,7 +28,6 @@ public class Pathfinder : MonoBehaviour
             ColorStartAndEnd();
             BreadthFirstSearch();
             CreatePath();
-            
         }
         return path;
     }

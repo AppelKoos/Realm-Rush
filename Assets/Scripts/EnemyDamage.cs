@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] int hitPoints = 10;
+    [SerializeField] BoxCollider enemyCollider;
     bool isDead = false;
    
     public bool GetIsDead()

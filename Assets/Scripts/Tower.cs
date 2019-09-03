@@ -32,9 +32,9 @@ public class Tower : MonoBehaviour
         else
         { Shoot(false); }
     }
-    private void Shoot(bool isShotting)
+    private void Shoot(bool isShooting)
     {
         var emissionModule = projectileParticle.emission;
-        emissionModule.enabled = isShotting;
+        emissionModule.enabled = isShooting;
     }
 }

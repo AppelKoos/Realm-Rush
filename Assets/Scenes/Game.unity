@@ -1049,6 +1049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 302334551}
+  - component: {fileID: 302334552}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -1071,6 +1072,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &302334552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302334550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0a94195a097d648851637be5c0a4b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 755724840}
+  timeBetweenSpawn: 4
 --- !u!1001 &317427475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1955,8 +1970,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951957620, guid: 497ac8de29760cd48888d78769f2bee1, type: 3}
+      propertyPath: enemyChild
+      value: 
+      objectReference: {fileID: 755724842}
+    - target: {fileID: 755724842, guid: 497ac8de29760cd48888d78769f2bee1, type: 3}
+      propertyPath: enemyCollider
+      value: 
+      objectReference: {fileID: 1409825834}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 497ac8de29760cd48888d78769f2bee1, type: 3}
+--- !u!1 &755724840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4671840330932169346, guid: 497ac8de29760cd48888d78769f2bee1,
+    type: 3}
+  m_PrefabInstance: {fileID: 755724839}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &755724842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 755724842, guid: 497ac8de29760cd48888d78769f2bee1,
+    type: 3}
+  m_PrefabInstance: {fileID: 755724839}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755724840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da30bfe565fdf04db862e3b9bab89e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &836515551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6937028485767245487, guid: fa6d275a36700694bbdc5c1cd76855e4,
@@ -2906,6 +2947,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6937028485767245487, guid: fa6d275a36700694bbdc5c1cd76855e4,
     type: 3}
   m_PrefabInstance: {fileID: 317427475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1409825834 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2107450830, guid: 497ac8de29760cd48888d78769f2bee1,
+    type: 3}
+  m_PrefabInstance: {fileID: 755724839}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1419223442
 GameObject:
