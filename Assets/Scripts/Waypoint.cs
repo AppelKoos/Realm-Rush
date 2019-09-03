@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    [SerializeField] Color exploredColor = Color.blue;
     public Waypoint exploredFrom;
     public bool isExplored = false;
+
+    //[SerializeField] Tower towerPrefab;
+
     Vector2Int gridPos;
     const int GRIDSIZE = 10;
+
     public int GetGridSize()
     {
         return GRIDSIZE;
@@ -20,20 +23,25 @@ public class Waypoint : MonoBehaviour
             Mathf.RoundToInt(transform.position.z / GRIDSIZE)
         );
     }
-    private void UpdateColorOnExplore()
+  
+    /*private void PlaceTower()
     {
-        MeshRenderer topMeshRenderer = transform.Find("CubeFace1").GetComponent<MeshRenderer>();
-        if (isExplored)
-        {
-            topMeshRenderer.material.color = exploredColor;
-        }
-        else
-        {
-            topMeshRenderer.material.color = Color.white;
-        }
-    }
-    private void OnMouseOver()
+        Instantiate(towerPrefab, transform.position, Quaternion.identity);
+        isPlacable = false;
+    }*/
+    /*private void OnMouseOver()
     {
-        print("Mouse over " + gameObject.name);
-    }
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (isPlacable)
+            {
+                PlaceTower();
+                print("Tower placed at " + gameObject.name);
+            }
+            else
+            {
+                print("Cannot place at" + gameObject.name);
+            }
+        }
+    }*/
 }

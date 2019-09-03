@@ -32,16 +32,21 @@ public class Pathfinder : MonoBehaviour
     }
     private void CreatePath()
     {
-        path.Add(endWaypoint);
+        SetAsPath(endWaypoint);
         Waypoint prevouis = endWaypoint.exploredFrom;
         while(prevouis != startWaypoint)
         {
-            path.Add(prevouis);
             prevouis = prevouis.exploredFrom;
+            SetAsPath(prevouis);
         }
-        path.Add(startWaypoint);
+        SetAsPath(startWaypoint);
         path.Reverse();
     }
+    private void SetAsPath(Waypoint wayPoint)
+    {
+        path.Add(wayPoint);
+    }
+
     private void BreadthFirstSearch()
     {
         queue.Enqueue(startWaypoint);
