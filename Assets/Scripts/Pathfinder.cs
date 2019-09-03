@@ -36,8 +36,8 @@ public class Pathfinder : MonoBehaviour
         Waypoint prevouis = endWaypoint.exploredFrom;
         while(prevouis != startWaypoint)
         {
-            prevouis = prevouis.exploredFrom;
             SetAsPath(prevouis);
+            prevouis = prevouis.exploredFrom;
         }
         SetAsPath(startWaypoint);
         path.Reverse();

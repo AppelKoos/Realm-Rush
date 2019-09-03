@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlaceTowers : MonoBehaviour
 {
-    [SerializeField] Tower towerPrefab;
     public bool isPlacable = true;
 
+    [SerializeField] Tower towerPrefab;
+  
     private void PlaceTower()
     {
         Instantiate(towerPrefab, transform.position, Quaternion.identity);

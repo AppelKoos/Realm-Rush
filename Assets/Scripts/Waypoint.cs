@@ -7,8 +7,6 @@ public class Waypoint : MonoBehaviour
     public Waypoint exploredFrom;
     public bool isExplored = false;
 
-    //[SerializeField] Tower towerPrefab;
-
     Vector2Int gridPos;
     const int GRIDSIZE = 10;
 
@@ -23,25 +21,4 @@ public class Waypoint : MonoBehaviour
             Mathf.RoundToInt(transform.position.z / GRIDSIZE)
         );
     }
-  
-    /*private void PlaceTower()
-    {
-        Instantiate(towerPrefab, transform.position, Quaternion.identity);
-        isPlacable = false;
-    }*/
-    /*private void OnMouseOver()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (isPlacable)
-            {
-                PlaceTower();
-                print("Tower placed at " + gameObject.name);
-            }
-            else
-            {
-                print("Cannot place at" + gameObject.name);
-            }
-        }
-    }*/
 }

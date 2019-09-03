@@ -13,7 +13,6 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator spawnEnemy()
     {
         while(true){
-            print("spawner called");
             Instantiate(enemy, new Vector3(0,2,-10), Quaternion.identity);
             yield return new WaitForSeconds(timeBetweenSpawn);
         }
