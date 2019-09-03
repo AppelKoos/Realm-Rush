@@ -22,27 +22,28 @@ public class Pathfinder : MonoBehaviour
 
     public List<Waypoint> GetPath()
     {
-        LoadBlocks();
-        ColorStartAndEnd();
-        BreadthFirstSearch();
-        CreatePath();
+        if(path.Count == 0)
+        {
+            LoadBlocks();
+            ColorStartAndEnd();
+            BreadthFirstSearch();
+            CreatePath();
+            
+        }
         return path;
     }
     private void CreatePath()
     {
         path.Add(endWaypoint);
-
         Waypoint prevouis = endWaypoint.exploredFrom;
         while(prevouis != startWaypoint)
         {
             path.Add(prevouis);
             prevouis = prevouis.exploredFrom;
         }
-
         path.Add(startWaypoint);
         path.Reverse();
     }
-
     private void BreadthFirstSearch()
     {
         queue.Enqueue(startWaypoint);
@@ -55,12 +56,10 @@ public class Pathfinder : MonoBehaviour
             searchCenter.isExplored = true;
         }
     }
-
     private void HaltIfEndFound()
     {
         if (searchCenter == endWaypoint){isRunning = false;}  
     }
-
     private void ColorStartAndEnd()
     {
         startWaypoint.SetTopColor(Color.green);
@@ -76,7 +75,6 @@ public class Pathfinder : MonoBehaviour
             {QueueNewNeighbours(neighbourCoords);}
         }
     }
-
     private void QueueNewNeighbours(Vector2Int neighbourCoords)
     {
         Waypoint neightbour = grid[neighbourCoords];
@@ -103,4 +101,3 @@ public class Pathfinder : MonoBehaviour
         }
     }
 }
-

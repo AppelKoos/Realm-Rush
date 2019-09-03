@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    [SerializeField] EnemyDamage enemyChild;
     private void Start()
     {
         Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
@@ -12,12 +13,19 @@ public class EnemyMovement : MonoBehaviour
     }
     IEnumerator FollowPath(List<Waypoint> path)
     {
-        print("Start Patrol");
         foreach (Waypoint waypoint in path)
         {
-            transform.position = waypoint.transform.position;
-            yield return new WaitForSeconds(0.2f);
+            if (enemyChild.GetIsDead())
+            {
+                print("Child dead, destroying self");
+                Destroy(gameObject);
+                break;
+            }
+            else
+            {
+                transform.position = waypoint.transform.position;
+                yield return new WaitForSeconds(2f);
+            }  
         }
-        print("End Patrol");
     }
 }
