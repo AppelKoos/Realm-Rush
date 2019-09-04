@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
+    public PlaceTowers towerBase;
+
     [SerializeField] Transform objectToPan;
     [SerializeField] float attackRange = 30f;
     [SerializeField] ParticleSystem projectileParticle;
     
     Transform targetEnemy;
+
     void Update()
     {
         SetTargetEnemy();

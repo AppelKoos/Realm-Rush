@@ -6,6 +6,8 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] GameObject enemy;
     [SerializeField] float timeBetweenSpawn = 2.0f;
+    [SerializeField] Transform enemyParent;
+
     private void Start()
     {
         StartCoroutine(spawnEnemy());
@@ -13,7 +15,8 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator spawnEnemy()
     {
         while(true){
-            Instantiate(enemy, new Vector3(0,2,-10), Quaternion.identity);
+            var newEnemy = Instantiate(enemy, new Vector3(0,2,-10), Quaternion.identity);
+            newEnemy.transform.parent = enemyParent;
             yield return new WaitForSeconds(timeBetweenSpawn);
         }
     }

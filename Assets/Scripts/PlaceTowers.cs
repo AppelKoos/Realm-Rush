@@ -7,19 +7,14 @@ public class PlaceTowers : MonoBehaviour
     public bool isPlacable = true;
 
     [SerializeField] Tower towerPrefab;
-  
-    private void PlaceTower()
-    {
-        Instantiate(towerPrefab, transform.position, Quaternion.identity);
-        isPlacable = false;
-    }
+ 
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
         {
             if (isPlacable)
             {
-                PlaceTower();
+                FindObjectOfType<TowerFactory>().AddTower(this);
             }
             else
             {
