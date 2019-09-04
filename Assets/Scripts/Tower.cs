@@ -41,8 +41,8 @@ public class Tower : MonoBehaviour
     }
     private Transform GetClosest(Transform transformA, Transform transformB)
     {
-        float distToA = Vector3.Distance(transformA.position, transformB.position);
-        float distToB = Vector3.Distance(transformB.position, transformA.position);
+        float distToA = Vector3.Distance(transform.position, transformA.position);
+        float distToB = Vector3.Distance(transform.position, transformB.position);
         if (distToA < distToB)
         {
             return transformA;
@@ -59,7 +59,10 @@ public class Tower : MonoBehaviour
             Shoot(true);
         }
         else
-        { Shoot(false); }
+        {
+            SetTargetEnemy();
+            Shoot(false);
+        }
     }
     private void Shoot(bool isShooting)
     {
