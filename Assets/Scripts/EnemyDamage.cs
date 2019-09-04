@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    [SerializeField] int hitPoints = 10;
+    [SerializeField] int hitPoints = 5;
     [SerializeField] BoxCollider enemyCollider;
     [SerializeField] ParticleSystem hitParticlePrefab;
     [SerializeField] ParticleSystem deathParticlePrefab;
+
+    private int enemiesKilled = 0;
+
+    public int GetEnemiesKilled()
+    {
+        return enemiesKilled;
+    }
 
     private void OnParticleCollision(GameObject other)
     {
@@ -23,6 +30,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (hitPoints < 0)
         {
+            enemiesKilled++;
             var vfx = Instantiate(deathParticlePrefab,transform.position,Quaternion.identity);
             vfx.Play();
             float destroyDelay = vfx.main.duration;
